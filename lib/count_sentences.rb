@@ -33,8 +33,7 @@ class String
     
     
     #binding.pry
-       new_array = self.split(/[.?!]/).reject {|string| string.empty?}
-    return new_array.length
+       elf.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
   
     end
 end
