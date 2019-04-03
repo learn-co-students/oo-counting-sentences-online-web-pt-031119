@@ -4,6 +4,7 @@ class String
 
   def sentence?
     self.end_with?(".")
+      
   end
 
   def question?
@@ -17,7 +18,10 @@ class String
   end
 
   def count_sentences
-    #binding.pry
-  self.split(".","?").count
+   #binding.pry
+  self.split(/[.?!]/).delete_if{|a|a.empty?}.count
+ 
+  
   end
 end
+
