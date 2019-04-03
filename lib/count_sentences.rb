@@ -28,4 +28,3 @@ self.end_with?("?")
   
 end
 
-cities.reject { |c| c.empty? }
